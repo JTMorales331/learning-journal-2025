@@ -1,0 +1,5 @@
+@import './variables.css';
+
+.navbar, .dropdown-content, .footer {
+  background-color: var(--background-grey);
+}
