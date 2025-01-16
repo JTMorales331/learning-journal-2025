@@ -3,3 +3,11 @@
 .navbar, .dropdown-content, .footer {
   background-color: var(--background-grey);
 }
+
+.navbar {
+  font-family: var(--font-family-header);
+
+  .menu {
+    background-color: var(--background-grey); 
+  }
+}

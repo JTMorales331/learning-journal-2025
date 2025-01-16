@@ -1,11 +1,13 @@
-import React from 'react'
 
-export default function Header() {
+export default function Header({children}) {
   return (
-    <nav className="navbar p-3">
+    <nav className="navbar py-3 px-2 md:px-3">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">Learning Journal</a>
       </div>
+
+      {children}
+
       <div className="dropdown dropdown-end">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
@@ -20,7 +22,7 @@ export default function Header() {
           <li>
             <a className="justify-between">
               Profile
-              <span className="badge">New</span>
+              {/* <span className="badge">New</span> */}
             </a>
           </li>
           <li><a>Settings</a></li>
@@ -28,6 +30,5 @@ export default function Header() {
         </ul>
       </div>
     </nav>
-
   )
 }

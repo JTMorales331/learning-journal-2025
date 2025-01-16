@@ -1,14 +1,14 @@
-import React from 'react'
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
+
 
 export default function Footer() {
   return (
     <footer className="footer footer-center rounded py-7">
       <aside className="grid-flow-col items-center">
-      <a className="btn btn-ghost text-xl">Learning Journal</a>
+      <a className="btn btn-ghost text-lg">Learning Journal</a>
       </aside>
       
-      <nav>
+      <nav className="">
         <div className="grid grid-flow-col gap-4">
           <a href="#" aria-label="GitHub">
             <FaGithub size={24} />
