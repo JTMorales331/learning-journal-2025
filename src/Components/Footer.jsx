@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center rounded py-7">
+    <footer className="footer container footer-center rounded py-7">
       <aside className="grid-flow-col items-center">
       <a className="btn btn-ghost text-lg">Learning Journal</a>
       </aside>

@@ -16,7 +16,7 @@ export default function Home({latestBlog, blogsLayout}) {
   return (
     <>
       <Link to='#'>
-        <section className="section-home" style={blogImg}>
+        <section className="mb-10" style={blogImg}>
           <div className="container featured-post">
             <div className="blog-date">{latestBlog.date}</div>
             <h2>{latestBlog.title}</h2>

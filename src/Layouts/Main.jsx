@@ -17,7 +17,7 @@ export default function Main() {
           </div>
         </Header.Navigation>
       </Header>
-      <main className="main-content">
+      <main className="mb-10">
         <Outlet />
       </main>
       <Footer />
