@@ -13,7 +13,7 @@ export default function Header({children}) {
           <div className="w-10 rounded-full">
             <img
               alt="Tailwind CSS Navbar component"
-              src='../../public/images/profilepic.JPG' />
+              src='images/profilepic.JPG' />
           </div>
         </div>
         <ul

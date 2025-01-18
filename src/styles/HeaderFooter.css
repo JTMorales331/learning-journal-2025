@@ -2,6 +2,8 @@
 
 .navbar, .dropdown-content, .footer {
   background-color: var(--background-grey);
+  color: var(--text-primary);
+
 }
 
 .navbar {

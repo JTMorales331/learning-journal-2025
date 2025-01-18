@@ -24,15 +24,28 @@ html, body {
   padding: 0;
   height: 100%;
   background-color: #121212;
+  color: var(--text-primary);
 }
 
-.content-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@layer base {
+  .container {
+    @apply max-w-[100vw] my-auto;
+    @apply py-[1.25rem] md:py-[3rem];
+  }
+
+  .container-fluid {
+    @apply w-full p-[1rem];
+  }
+
+  .content-wrapper {
+    @apply min-h-screen flex flex-col;
+  }
+
+  .main-content {
+    @apply flex-grow;
+  }
 }
 
-.main-content {
-  flex-grow: 1;
-}
+
+
 
