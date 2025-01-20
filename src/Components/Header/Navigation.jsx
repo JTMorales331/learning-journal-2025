@@ -17,7 +17,7 @@ export default function Navigation({children}) {
       
       {/* shows in large screens */}
       <nav
-        className='hidden lg:flex flex-row items-end gap-3'
+        className='hidden lg:flex flex-row items-end justify-center gap-3'
         aria-label="Main Navigation"
       >
         {children}

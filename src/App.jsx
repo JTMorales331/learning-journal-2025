@@ -32,11 +32,7 @@ function App() {
         const data = await getBlogsData()
         setBlogs(data.blogs)
         
-        setLatestBlog(data.blogs[0])
-
-        if (data.blogs.length > 0) {
-          console.log('Latest Blog:', data.blogs[0])
-        }
+        setLatestBlog(data.blogs[data.blogs.length - 1])
       } catch (err){
         console.error('error: ', err)
         setError(prev => [...prev, 'problem in fetching blogs: ' + err])
@@ -74,6 +70,7 @@ function App() {
                     {blogsComponents}
                   </BlogsLayout>
                 }
+                isGettingBlogs={isLoading}
               />
             }
           />

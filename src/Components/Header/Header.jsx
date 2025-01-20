@@ -4,7 +4,9 @@ export default function Header({children}) {
     <header className="navbar p-0">
       <div className="container m-0">
         <div className="flex-1">
-          <a className="btn-ghost text-xl">Learning Journal</a>
+          <a className="btn-ghost cursor-pointer font-extrabold text-xl hover:bg-transparent">
+            <span className="text-blue-400">Learning</span>Journal
+          </a>
         </div>
 
         {/* for navigation */}
