@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 export default function Navigation({children}) {
   return (
     <>
-      {/* shows in large screens */}
+      {/* shows in smaller screens */}
       <div className="dropdown dropdown-end lg:hidden">
         <div tabIndex={0} role="button" className="btn btn-ghost rounded-btn"><RxHamburgerMenu size={30}/></div>
         <ul
@@ -15,9 +15,9 @@ export default function Navigation({children}) {
 
       
       
-      {/* shows in screens smaller than large */}
+      {/* shows in large screens */}
       <nav
-        className='hidden lg:flex flex-row items-center gap-3 mr-3'
+        className='hidden lg:flex flex-row items-end gap-3'
         aria-label="Main Navigation"
       >
         {children}

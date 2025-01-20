@@ -35,7 +35,7 @@ html, body {
 
 @layer base {
   .container {
-    @apply min-w-[100vw] my-auto;
+    @apply min-w-[100%] my-auto;
     @apply px-[1.25rem] md:px-[3rem];
   }
 
@@ -44,7 +44,7 @@ html, body {
   }
 
   .content-wrapper {
-    @apply min-h-screen flex flex-col;
+    @apply min-h-[100vh] flex flex-col;
   }
 
   .main-content {
