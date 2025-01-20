@@ -38,7 +38,7 @@ function App() {
           console.log('Latest Blog:', data.blogs[0])
         }
       } catch (err){
-        console.error(err)
+        console.error('error: ', err)
         setError(prev => [...prev, 'problem in fetching blogs: ' + err])
       } finally {
         setIsLoading(false)
