@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom'
 import { getBlogData } from '.././services/Blogs'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
+// Components
 import Loading from '../Components/Loading'
 
-export default function PostDetail() {
+export default function PostDetail({ blogsLayout }) {
   
   // to get :id of params from URL
   const params = useParams()
@@ -38,9 +39,25 @@ export default function PostDetail() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="container">
-          
-        </div>
+        <>
+          <div className="container">
+            <div className="mx-3 md:mx-10 mt-10">
+              <div className="mb-1 text-sm md:text-base">
+                {blog.date}
+              </div>
+              <h1 className="mb-5 font-bold text-3xl">{blog.title}</h1>
+              <div className="">
+                {blog.content}
+              </div>
+            </div>
+            
+            <div className="mt-10">
+              <img src={blog.img} alt={`image of ${blog.title}`} />
+            </div>
+          </div>
+
+          {blogsLayout}
+        </>
       )}
     </section>
   )

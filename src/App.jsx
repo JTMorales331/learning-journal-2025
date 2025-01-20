@@ -6,7 +6,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 import Main from './Layouts/Main'
 
 // components
-import BlogsLayout from './Components/Blogs/Layout'
+import BlogsLayout from './Components/Blogs/index'
 
 // Pages
 import Home from './Pages/Home'
@@ -51,14 +51,7 @@ function App() {
 
   const blogsComponents = blogs.map(blog => {
     return (
-      <div className="blog-card" key={blog.id}>
-        <Link to={`/post/${blog.id}`}>
-          <img src={blog.img} alt={`picture of ${blog.title}`} />
-          <div className="blog-date">{blog.date}</div>
-          <h3>{blog.title}</h3>
-          <p>{blog.content}</p>
-        </Link>
-      </div>
+      <BlogsLayout.Blog key={blog.id} blog={blog} />
     )
   })
   
@@ -70,10 +63,19 @@ function App() {
           {/* Home */}
           <Route 
             index
-            element={<Home
-              latestBlog={latestBlog}
-              blogsLayout={<BlogsLayout blogsComponents={blogsComponents} />}
-            />}
+            element=
+            {
+              <Home
+                latestBlog={latestBlog}
+                blogsLayout={
+                  <BlogsLayout
+                    header="Recent Posts"
+                  >
+                    {blogsComponents}
+                  </BlogsLayout>
+                }
+              />
+            }
           />
 
           {/* About */}
@@ -85,7 +87,17 @@ function App() {
           {/* Post Detail */}
           <Route
             path="post/:id"
-            element={<PostDetail />}
+            element={
+            <PostDetail
+              blogsLayout={
+                <BlogsLayout
+                  header="Related Posts"
+                  border={true}
+                >
+                  {blogsComponents}
+                </BlogsLayout>
+              }
+            />}
           />
         </Route>
       </Routes>
