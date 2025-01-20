@@ -1,8 +1,8 @@
 
 export default function Header({children}) {
   return (
-    <header className="navbar">
-      <div className="container">
+    <header className="navbar p-0">
+      <div className="container m-0">
         <div className="flex-1">
           <a className="btn-ghost text-xl">Learning Journal</a>
         </div>

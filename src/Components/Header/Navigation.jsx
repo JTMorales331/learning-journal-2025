@@ -5,7 +5,7 @@ export default function Navigation({children}) {
     <>
       {/* shows in smaller screens */}
       <div className="dropdown dropdown-end lg:hidden">
-        <div tabIndex={0} role="button" className="btn btn-ghost rounded-btn"><RxHamburgerMenu size={30}/></div>
+        <div tabIndex={0} role="button" className="btn btn-ghost rounded-btn border p-0"><RxHamburgerMenu size={30}/></div>
         <ul
           tabIndex={0}
           className="menu dropdown-content rounded-box z-[1] mt-4 w-48 p-2 shadow">

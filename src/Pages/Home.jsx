@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Home({latestBlog, blogsLayout}) {
 
@@ -15,15 +15,20 @@ export default function Home({latestBlog, blogsLayout}) {
 
   return (
     <>
-      <Link to='#'>
+      <NavLink 
+        to={`/post/${latestBlog.id}`}
+        className=""
+      >
         <section className="mb-10" style={blogImg}>
-          <div className="container featured-post">
-            <div className="blog-date">{latestBlog.date}</div>
-            <h2>{latestBlog.title}</h2>
-            <p>{latestBlog.content}</p>
+          <div className="container">
+            <div className="mr-6 sm:mr-16 md:mr-40 pb-10">
+              <div className="transform -translate-x-full opacity-0 text-sm md:text-base motion-safe:animate-slide-right">{latestBlog.date}</div>
+              <h2 className="transform -translate-x-full opacity-0 font-bold text-3xl mb-3 animate-slide-right-delay-05">{latestBlog.title}</h2>
+              <p className="transform -translate-x-full opacity-0 animate-slide-right-delay-1s">{latestBlog.content}</p>
+            </div>
           </div>
         </section>
-      </Link>
+      </NavLink>
 
       {blogsLayout}
     </>
