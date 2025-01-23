@@ -46,13 +46,14 @@ export default function PostDetail({ blogsLayout }) {
                 {blog.date}
               </div>
               <h1 className="mb-5 font-bold text-3xl">{blog.title}</h1>
-              <div className="">
+              
+              <div className="mt-5">
                 {blog.content}
               </div>
-            </div>
-            
-            <div className="mt-10">
-              <img src={blog.img} alt={`image of ${blog.title}`} />
+
+              <div className="mt-5 flex justify-center items-center">
+                <img src={blog.img} className='max-w-[70vw] rounded' alt={`image of ${blog.title}`} />
+              </div>
             </div>
           </div>
 
