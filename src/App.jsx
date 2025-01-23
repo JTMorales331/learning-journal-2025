@@ -78,7 +78,18 @@ function App() {
           {/* About */}
           <Route
             path="/about"
-            element={<About />}
+            element={
+              <About
+                blogsLayout={
+                  <BlogsLayout
+                    header="Recent Posts"
+                    border={true}
+                  >
+                    {blogsComponents}
+                  </BlogsLayout>
+                }
+              />
+            }
           />
 
           {/* Post Detail */}
