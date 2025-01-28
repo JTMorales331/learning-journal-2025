@@ -11,7 +11,8 @@ import BlogsLayout from './Components/Blogs/index'
 // Pages
 import Home from './Pages/Home'
 import About from './Pages/About'
-import PostDetail from './Pages/PostDetail'
+import PostDetail from './Pages/Post/Detail'
+import PostCreate from './Pages/Post/Create'
 
 // Services
 import {
@@ -82,14 +83,20 @@ function App() {
               <About
                 blogsLayout={
                   <BlogsLayout
-                    header="Recent Posts"
+                  header="Recent Posts"
                     border={true}
                   >
                     {blogsComponents}
                   </BlogsLayout>
                 }
-              />
-            }
+                />
+              }
+          />
+
+          {/* Post Create */}
+          <Route 
+            path="post/create"
+            element={<PostCreate />}
           />
 
           {/* Post Detail */}

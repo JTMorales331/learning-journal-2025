@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { getBlogData } from '.././services/Blogs'
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { getBlogData } from '../../services/Blogs'
 
 // Components
-import Loading from '../Components/Loading'
+import Loading from '../../Components/Loading'
 
-export default function PostDetail({ blogsLayout }) {
+export default function Detail({ blogsLayout }) {
   
   // to get :id of params from URL
   const params = useParams()
