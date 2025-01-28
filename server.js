@@ -65,5 +65,11 @@ createServer({
       const id = request.params.id
       return schema.blogs.find(id)
     })
+
+    // create a new blog post
+    this.post('/blogs', (schema, request) => {
+      const attrs = JSON.parse(request.requestBody)
+      return schema.blog.create(attrs)
+    })
   }
 })
