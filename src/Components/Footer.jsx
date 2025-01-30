@@ -10,13 +10,13 @@ export default function Footer() {
       
       <nav className="">
         <div className="grid grid-flow-col gap-4">
-          <a href="#" aria-label="GitHub">
+          <a href="https://github.com/JTMorales331" aria-label="GitHub">
             <FaGithub size={24} />
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://www.facebook.com/john.t.morales.7" aria-label="Facebook">
             <FaFacebook size={24} />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/john-terence-morales-b7078a325/" aria-label="LinkedIn">
             <FaLinkedin size={24} />
           </a>
         </div>
