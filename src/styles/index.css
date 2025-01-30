@@ -1,7 +1,7 @@
 @import './variables.css';
 @import './HeaderFooter.css';
 @import './Typography.css';
-@import './ConfirmModal.css';
+@import './Modals.css';
 
 @tailwind base;
 @tailwind components;

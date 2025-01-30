@@ -10,7 +10,7 @@ export default function Main() {
       <Header>
         <Header.Navigation>
           <div className="nav-item">
-            <NavLink className={({isActive}) => isActive ? 'active-link hover:underline' : 'hover:underline'} to="/post/create">Create Post</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active-link hover:underline' : 'hover:underline'} to="/post/form">Posts</NavLink>
           </div>
           <div className="nav-item">
             <NavLink className={({isActive}) => isActive ? 'active-link hover:underline' : 'hover:underline'} to="/">Home</NavLink>

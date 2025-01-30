@@ -93,9 +93,9 @@ function App() {
               }
           />
 
-          {/* Post Create */}
+          {/* Post Form */}
           <Route 
-            path="post/create"
+            path="post/form"
             element={<PostForm />}
           />
 

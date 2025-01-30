@@ -6,7 +6,10 @@ import Loading from '../../Components/Loading'
 
 // Models
 import { DEFAULT_POST } from '../../models'
+
+// Modals
 import ConfirmModal from '../../modals/ConfirmModal'
+import MessageModal from '../../modals/MessageModal'
 
 export default function Form() {
 
@@ -19,6 +22,7 @@ export default function Form() {
   const [error, setError] = useState([])
   const [post, setPost] = useState({...DEFAULT_POST})
   const [confirmModalAction, setConfirmModalAction] = useState(null)
+  const [messageModalOpen, setMessageModalOpen] = useState(false)
   const [confirmationModalOpen, setConfirmationModalOpen] = useState(false)
 
   const handleChange = (e) => {
@@ -33,19 +37,20 @@ export default function Form() {
     setLoading(true)
     try {
       console.log('submitted!')
+      setConfirmationModalOpen(false)
+      setMessageModalOpen(true)
 
-      if (fromSpecificPage) {
-        navigate('/', { replace: true });
-      } else {
-        navigate(-1);
-      }
+      setTimeout(() => {
+        setMessageModalOpen(false)
+        setLoading(false)
+        window.location.reload(true)
+      }, [2500])
 
     } catch (payload) {
       console.log('Error', payload.response)
       setError(payload.response.data)
     } finally {
       setLoading(false)
-      setConfirmationModalOpen(false)
     }
   }
 
@@ -60,10 +65,6 @@ export default function Form() {
         navigate(-1);
       }
     }
-  }
-
-  const handleSubmit = () => {
-    console.log('submitting')
   }
 
   // to open confirmation modal
@@ -150,6 +151,12 @@ export default function Form() {
       >
         Are you sure you want to {confirmModalAction} this user?
       </ConfirmModal>
+
+      <MessageModal
+        isShowing={messageModalOpen}
+      >
+        Post Created!
+      </MessageModal>
     </>
 
   )
