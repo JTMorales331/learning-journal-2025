@@ -12,7 +12,7 @@ import BlogsLayout from './Components/Blogs/index'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import PostDetail from './Pages/Post/Detail'
-import PostCreate from './Pages/Post/Create'
+import PostForm from './Pages/Post/Form'
 
 // Services
 import {
@@ -96,7 +96,7 @@ function App() {
           {/* Post Create */}
           <Route 
             path="post/create"
-            element={<PostCreate />}
+            element={<PostForm />}
           />
 
           {/* Post Detail */}

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 import Loading from '../Components/Loading'
 
 export default function Home({latestBlog, blogsLayout, isGettingBlogs}) {

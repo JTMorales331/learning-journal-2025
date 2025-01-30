@@ -1,5 +1,7 @@
 @import './variables.css';
 @import './HeaderFooter.css';
+@import './Typography.css';
+@import './ConfirmModal.css';
 
 @tailwind base;
 @tailwind components;
@@ -58,5 +60,9 @@ html, body {
 
   .active-link {
     @apply text-blue-400;
+  }
+
+  .input-default {
+    @apply bg-[var(--background-grey)] border border-[var(--border-grey)] rounded;
   }
 }
